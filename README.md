@@ -3,7 +3,9 @@
 The R script consists of a series of functions that can be used to create a dataset by crawling through the webpages of openhub.net, determining if different projects are similar to each other, calculate the coverage scores of a dataset and creating a representative and diverse sample dataset. The necessary R packages to run the functions are included. A list of 29549 project URLs is made available as the universe.rds file. The dataset consisting of 13596 projects is made available in the dataset1.rds file in its regular form, as created by the openHubDataExtraction function, while the dataset2.rds file includes the log10 values for all numerical categories to allow faster computing when using the similarity functions.
 
 Similarity is based on the definitions used by Nagappan et al. in „Diversity in Software Engineering Research“ [1].
+
 Two strings are similar if they are identical, two numbers are similar when they are in the same order of magnitude as expressed by the formula:
+
 abs(log10(x) - log10(y)) <= 0.5.
 
 # openHubDataExtraction:
